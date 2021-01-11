@@ -99,6 +99,7 @@ build {
   // Enable Jenkins Nginx config
   provisioner "shell" {
     inline = [
+      "rm /etc/nginx/sites-enabled/default",
       "ln -s /etc/nginx/sites-available/jenkins /etc/nginx/sites-enabled/jenkins"
     ]
   }
