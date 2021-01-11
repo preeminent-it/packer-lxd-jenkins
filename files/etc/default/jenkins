@@ -1,0 +1,26 @@
+# defaults for Jenkins automation server
+
+JAVA_ARGS="-Djava.awt.headless=true"
+PIDFILE=/var/run/jenkins.pid
+JENKINS_USER=jenkins
+JENKINS_GROUP=jenkins
+JENKINS_WAR=/var/lib/jenkins/jenkins.war
+JENKINS_HOME=/var/lib/jenkins
+RUN_STANDALONE=true
+#JENKINS_LOG=daemon.info
+JENKINS_ENABLE_ACCESS_LOG="no"
+MAXOPENFILES=8192
+HTTP_PORT=8080
+#PREFIX=/
+
+# arguments to pass to jenkins.
+# --javahome=$JAVA_HOME
+# --httpListenAddress=$HTTP_HOST (default 0.0.0.0)
+# --httpPort=$HTTP_PORT (default 8080; disable with -1)
+# --httpsPort=$HTTP_PORT
+# --argumentsRealm.passwd.$ADMIN_USER=[password]
+# --argumentsRealm.roles.$ADMIN_USER=admin
+# --webroot=~/.jenkins/war
+# --prefix=$PREFIX
+
+JENKINS_ARGS="--webroot=/var/lib/jenkins --httpPort=8080"

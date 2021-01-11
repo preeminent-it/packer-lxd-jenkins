@@ -1,0 +1,10 @@
+[Unit]
+Description=Jenkins Daemon
+
+[Service]
+User=jenkins
+EnvironmentFile=/etc/default/jenkins
+ExecStart=/usr/bin/java -jar /var/lib/jenkins/jenkins.war
+
+[Install]
+WantedBy=multi-user.target
